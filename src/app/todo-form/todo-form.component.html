@@ -1,0 +1,13 @@
+<!-- Text input -->
+<div class="form-group">
+  <label for="todo-text">Todo</label>
+  <input
+    [(ngModel)]="todoItem"
+    type="text"
+    class="form-control"
+    id="todo-text"
+    placeholder="Enter todo text"
+  />
+</div>
+<!-- Button -->
+<button (click)="addTodoItem()" class="btn btn-primary">Add</button>

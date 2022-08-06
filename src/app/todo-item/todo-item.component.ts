@@ -1,11 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { FillTodoService } from '../services/fill-todo.service';
-
-export interface TodoItem {
-  id: number;
-  name: string;
-}
+import { TodoItem } from '../types/todo.type';
 
 @Component({
   selector: 'app-todo-item',
