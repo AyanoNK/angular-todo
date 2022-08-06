@@ -13,7 +13,7 @@ export interface TodoItem {
   styleUrls: ['./todo-item.component.css'],
 })
 export class TodoItemComponent implements OnInit {
-  todoItemList: string[] = [];
+  todoItemList: TodoItem[] = [];
 
   constructor(public fillTodoService: FillTodoService) {}
 
@@ -22,8 +22,6 @@ export class TodoItemComponent implements OnInit {
   }
 
   fillTodoItemList() {
-    this.todoItemList = this.fillTodoService
-      .fillTodoItemList()
-      .map((item: TodoItem) => `${item.id}: ${item.name}`);
+    this.todoItemList = this.fillTodoService.fillTodoItemList();
   }
 }
